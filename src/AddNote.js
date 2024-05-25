@@ -12,7 +12,7 @@ function AddNote() {
     e.preventDefault();
     axios
       .post(
-        "http://localhost:5000/notes",
+        "https://kyuseok-noteapp.netlify.app/notes",
         { title, content },
         {
           headers: {

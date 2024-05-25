@@ -10,7 +10,7 @@ function EditNote() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/notes/${id}`)
+      .get(`https://kyuseok-noteapp.netlify.app/notes/${id}`)
       .then((response) => {
         setTitle(response.data.title);
         setContent(response.data.content);

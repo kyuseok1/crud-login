@@ -10,11 +10,14 @@ function NotesList() {
     if (token) {
       const fetchNotes = async () => {
         try {
-          const response = await axios.get("http://localhost:5000/notes", {
-            headers: {
-              Authorization: `Bearer ${token}`, // Bearer 키워드 추가
-            },
-          });
+          const response = await axios.get(
+            "https://kyuseok-noteapp.netlify.app/notes",
+            {
+              headers: {
+                Authorization: `Bearer ${token}`, // Bearer 키워드 추가
+              },
+            }
+          );
           setNotes(response.data);
         } catch (error) {
           console.error("Error fetching notes", error);
