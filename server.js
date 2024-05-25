@@ -11,7 +11,12 @@ const app = express();
 dotenv.config();
 
 // 미들웨어 설정
-app.use(cors());
+const corsOptions = {
+  origin: "*", // 필요에 따라 특정 도메인으로 제한
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const SECRET_KEY = process.env.SECRET_KEY;
