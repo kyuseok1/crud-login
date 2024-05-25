@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NotesList from "./NotesList";
-import AddNote from "./AddNote";
-import EditNote from "./EditNote";
-import Login from "./Login";
-import Register from "./Register";
-import Header from "./Header";
-import PrivateRoute from "./PrivateRoute";
-import Profile from "./Profile";
+import NotesList from "./NotesList.js";
+import AddNote from "./AddNote.js";
+import EditNote from "./EditNote.js";
+import Login from "./Login.js";
+import Register from "./Register.js";
+import Header from "./Header.js";
+import PrivateRoute from "./PrivateRoute.js";
+import Profile from "./Profile.js";
 
 function App() {
   return (
