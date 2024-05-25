@@ -144,12 +144,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // 정적 파일 서빙 경로 수정
-const staticPath = path.join(__dirname, "/build");
+const staticPath = path.join(__dirname, "./build");
 console.log("Serving static files from:", staticPath);
 app.use(express.static(staticPath));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(staticPath, "/build/index.html"), (err) => {
+  res.sendFile(path.join(staticPath, "./build/index.html"), (err) => {
     if (err) {
       res.status(500).send(err);
     }
