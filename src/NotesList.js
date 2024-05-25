@@ -5,9 +5,9 @@ import axios from "axios";
 function NotesList() {
   const [notes, setNotes] = useState([]);
   const token = localStorage.getItem("token");
-  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
   useEffect(() => {
+    const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
     if (token) {
       const fetchNotes = async () => {
         try {

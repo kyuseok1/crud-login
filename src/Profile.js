@@ -5,8 +5,9 @@ const Profile = () => {
   const [profile, setProfile] = useState({});
   const [loading, setLoading] = useState(true);
   const token = localStorage.getItem("token");
-  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+
   useEffect(() => {
+    const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
     const fetchProfile = async () => {
       try {
         const response = await axios.get(`${API_URL}/profile`, {
