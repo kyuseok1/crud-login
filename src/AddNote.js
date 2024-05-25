@@ -7,12 +7,14 @@ function AddNote() {
   const [content, setContent] = useState("");
   const navigate = useNavigate();
   const token = localStorage.getItem("token"); // localStorage에서 토큰을 가져옴
+  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     axios
       .post(
-        "https://kyuseok-noteapp.netlify.app/notes",
+        `${API_URL}/note`,
         { title, content },
         {
           headers: {

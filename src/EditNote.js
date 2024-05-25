@@ -7,10 +7,11 @@ function EditNote() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const navigate = useNavigate();
+  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
   useEffect(() => {
     axios
-      .get(`https://kyuseok-noteapp.netlify.app/notes/${id}`)
+      .get(`${API_URL}/notes/${id}`)
       .then((response) => {
         setTitle(response.data.title);
         setContent(response.data.content);
